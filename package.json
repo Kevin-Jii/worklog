@@ -1,0 +1,24 @@
+{
+  "name": "jing-kewei-portfolio",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1"
+  },
+  "dependencies": {
+    "@fontsource-variable/archivo": "^5.2.8",
+    "@fontsource-variable/jetbrains-mono": "^5.2.8",
+    "@phosphor-icons/react": "^2.1.10",
+    "@tailwindcss/vite": "^4.1.17",
+    "@vitejs/plugin-react": "^5.1.1",
+    "motion": "^12.23.26",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "tailwindcss": "^4.1.17",
+    "three": "^0.181.2",
+    "vite": "^7.2.7"
+  }
+}

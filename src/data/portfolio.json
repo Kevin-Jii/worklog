@@ -1,0 +1,72 @@
+{
+  "profile": {
+    "name": "井科伟",
+    "initials": "JKW",
+    "role": "前端开发工程师",
+    "location": "浙江杭州",
+    "phone": "18336333673",
+    "email": "jeckwell@126.com",
+    "summary": "我把前端、跨端、硬件 SDK、后端接口和 AI 辅助研发拧成可交付的业务界面。"
+  },
+  "industries": [
+    {
+      "key": "medical",
+      "label": "医疗",
+      "title": "急诊管理平台",
+      "icon": "FirstAidKit",
+      "stack": "Vue2 / TinyMCE / WebSocket / PDA / C-Lodop",
+      "body": "围绕多院区急救现场做流程界面、PDA 扫码、离线缓存、打印集成和设备适配，让护理和急诊记录更接近无纸化闭环。",
+      "signals": ["PDA 扫码", "多院区复用", "打印签名链路"]
+    },
+    {
+      "key": "city",
+      "label": "智慧城市",
+      "title": "设备与数据协同界面",
+      "icon": "City",
+      "stack": "WebSocket / Device SDK / Nginx / Linux",
+      "body": "把设备状态、实时消息、第三方服务和前端操作台连起来，适合城市级多端协同、现场设备接入和数据流转类项目。",
+      "signals": ["实时链路", "设备接入", "跨端操作台"]
+    },
+    {
+      "key": "retail",
+      "label": "零售",
+      "title": "Tower 餐饮供应链中心",
+      "icon": "Storefront",
+      "stack": "Go Gin / Flutter / Redis / MySQL / RustFS",
+      "body": "独立构建餐饮供应链管理中心，覆盖 RBAC、库存预警、对象存储、桌面端管理和 DingTalk Robot 自动通知。",
+      "signals": ["库存预警", "多租户权限", "桌面端管理"]
+    }
+  ],
+  "aiFlow": [
+    {
+      "title": "架构拆解",
+      "body": "用 Claude Code 做模块边界、重构路径和复杂交互方案推演。",
+      "icon": "Brain"
+    },
+    {
+      "title": "识别与设备",
+      "body": "结合 OpenCV、PDA、蓝牙设备和签名板，把 AI 能力放进真实业务流程。",
+      "icon": "Cpu"
+    },
+    {
+      "title": "调试提效",
+      "body": "让 AI 参与问题定位、接口联调、组件抽离和交付文档整理。",
+      "icon": "Robot"
+    }
+  ],
+  "experiences": [
+    {
+      "period": "2023.03 - 2024.04",
+      "company": "杭州久巨通商贸有限公司",
+      "role": "独立开发者",
+      "detail": "Tower 餐饮供应链中心，跨平台桌面端、后端接口、库存预警和权限体系。"
+    },
+    {
+      "period": "2022.11 - 2023.02",
+      "company": "杭州健康科技",
+      "role": "前端开发工程师",
+      "detail": "医疗系统前端、多院区复用、PDA 扫码 SDK、打印与设备集成。"
+    }
+  ],
+  "stack": ["React", "Vue", "TypeScript", "uni-app", "Golang", "MySQL", "Redis", "Docker"]
+}

@@ -1,0 +1,54 @@
+.contact-section {
+  display: grid;
+  width: min(1240px, calc(100vw - 36px));
+  gap: 24px;
+  margin: 0 auto clamp(18px, 3vw, 34px);
+  padding: clamp(30px, 5vw, 64px);
+  border: 1px solid oklch(0.92 0.02 155 / 0.12);
+  border-radius: var(--radius-panel);
+  background:
+    radial-gradient(circle at 82% 10%, oklch(0.65 0.15 145 / 0.2), transparent 24rem),
+    var(--surface);
+}
+
+.contact-section > div:first-child {
+  display: grid;
+  gap: 16px;
+}
+
+.contact-section svg {
+  color: var(--primary);
+}
+
+.contact-section h2 {
+  max-width: 960px;
+  margin: 0;
+  font-size: clamp(2.05rem, 4.8vw, 4.55rem);
+  font-weight: 840;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  text-wrap: balance;
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.contact-section > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 680px) {
+  .contact-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .contact-section h2 {
+    font-size: clamp(2rem, 12vw, 3.15rem);
+  }
+}
