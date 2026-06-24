@@ -1,5 +1,5 @@
 import { EnvelopeSimple } from "@phosphor-icons/react";
-import "./Navigation.css";
+import "./css/Navigation.css";
 
 export function Navigation({ profile }) {
   const links = [

@@ -24,7 +24,7 @@ Avoid generic resume templates, centered hero plus equal cards, purple-blue AI g
 
 1. Show project depth through motion and structure, not through long paragraphs.
 2. Preserve resume facts while making the hierarchy easier to scan.
-3. Use WebGL as atmosphere and spatial context, not as decoration that hides content.
+3. Use ReactBits-style motion and GSAP choreography as spatial context, not as decoration that hides content.
 4. Let each major section use a distinct layout family.
 5. Keep motion purposeful, responsive, and respectful of reduced motion.
 

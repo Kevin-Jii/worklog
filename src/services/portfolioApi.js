@@ -1,32 +1,22 @@
 import fallbackPortfolio from "../data/portfolio.json";
 
-const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL || "https://portfolio-api.jeckwell.workers.dev";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
 
-function mergeProjectsIntoIndustries(projects) {
-  if (!Array.isArray(projects) || projects.length === 0) {
-    return fallbackPortfolio.industries;
-  }
+function mergeByTitle(localItems = [], remoteItems = []) {
+  const remoteByTitle = new Map(remoteItems.map((item) => [item.title, item]));
+  const localTitles = new Set(localItems.map((item) => item.title));
+  const mergedLocalItems = localItems.map((localItem) => ({
+    ...localItem,
+    ...(remoteByTitle.get(localItem.title) || {}),
+  }));
+  const remoteOnlyItems = remoteItems.filter((item) => !localTitles.has(item.title));
 
-  return fallbackPortfolio.industries.map((industry) => {
-    const project = projects.find((item) => item.industry === industry.label);
-
-    if (!project) {
-      return industry;
-    }
-
-    return {
-      ...industry,
-      title: project.title || industry.title,
-      body: project.summary || industry.body,
-      stack: project.stack || industry.stack,
-    };
-  });
+  return [...mergedLocalItems, ...remoteOnlyItems];
 }
 
 export async function loadPortfolio() {
   try {
-    const response = await fetch(`${API_BASE_URL}/api/projects`, {
+    const response = await fetch(`${API_BASE_URL}/api/portfolio`, {
       headers: {
         Accept: "application/json",
       },
@@ -40,7 +30,8 @@ export async function loadPortfolio() {
 
     return {
       ...fallbackPortfolio,
-      industries: mergeProjectsIntoIndustries(data.projects),
+      ...data,
+      projects: mergeByTitle(fallbackPortfolio.projects, data.projects),
       source: "api",
     };
   } catch (error) {

@@ -2,13 +2,13 @@
   display: grid;
   width: min(1240px, calc(100vw - 36px));
   gap: 24px;
-  margin: 0 auto clamp(18px, 3vw, 34px);
+  margin: 0 auto;
   padding: clamp(30px, 5vw, 64px);
-  border: 1px solid oklch(0.92 0.02 155 / 0.12);
+  border: 1px solid var(--line);
   border-radius: var(--radius-panel);
   background:
-    radial-gradient(circle at 82% 10%, oklch(0.65 0.15 145 / 0.2), transparent 24rem),
-    var(--surface);
+    radial-gradient(circle at 82% 10%, oklch(0.58 0.18 255 / 0.11), transparent 24rem),
+    white;
 }
 
 .contact-section > div:first-child {
@@ -17,12 +17,13 @@
 }
 
 .contact-section svg {
-  color: var(--primary);
+  color: var(--blue);
 }
 
 .contact-section h2 {
   max-width: 960px;
   margin: 0;
+  color: var(--ink);
   font-size: clamp(2.05rem, 4.8vw, 4.55rem);
   font-weight: 840;
   letter-spacing: -0.04em;

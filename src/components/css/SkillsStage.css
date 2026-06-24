@@ -1,0 +1,602 @@
+.skills-stage {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  min-height: 720px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 84% 16%,
+      oklch(0.79 0.18 142 / 0.2),
+      transparent 20rem
+    ),
+    radial-gradient(
+      circle at 16% 82%,
+      oklch(0.57 0.17 252 / 0.14),
+      transparent 24rem
+    ),
+    linear-gradient(
+      118deg,
+      oklch(0.985 0.006 250),
+      oklch(0.955 0.018 248) 48%,
+      oklch(0.99 0.004 250)
+    );
+  isolation: isolate;
+  perspective: 1500px;
+}
+
+.skills-stage::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(90deg, oklch(0.2 0.03 255 / 0.055) 1px, transparent 1px),
+    linear-gradient(0deg, oklch(0.2 0.03 255 / 0.04) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(circle at 58% 50%, black 0 48%, transparent 76%);
+}
+
+.skills-stage::after {
+  position: absolute;
+  inset: auto 0 0;
+  z-index: 2;
+  height: 1px;
+  pointer-events: none;
+  content: "";
+  background: linear-gradient(
+    90deg,
+    transparent,
+    oklch(0.58 0.18 255 / 0.42),
+    transparent
+  );
+}
+
+.skills-stage-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      132deg,
+      transparent 0 48%,
+      oklch(1 0 0 / 0.62) 48% 49%,
+      transparent 49%
+    ),
+    linear-gradient(
+      28deg,
+      transparent 0 58%,
+      oklch(0.22 0.04 255 / 0.07) 58% 59%,
+      transparent 59%
+    );
+}
+
+.skills-stage-shell {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(0, 1fr) auto;
+  width: min(1720px, calc(100vw - 32px));
+  height: 100%;
+  min-height: 0;
+  align-items: center;
+  gap: clamp(18px, 3vw, 42px);
+  margin: 0 auto;
+  padding: clamp(24px, 3.2vw, 46px) 0;
+  transform-origin: center bottom;
+  transform-style: preserve-3d;
+  will-change: transform, opacity, clip-path;
+}
+
+.skills-stage-head {
+  position: relative;
+  z-index: 6;
+  display: grid;
+  align-content: center;
+  max-width: 43rem;
+  gap: clamp(11px, 1.6vw, 18px);
+  transform-origin: left center;
+}
+
+.skills-stage-head span,
+.skill-module small {
+  color: var(--blue-strong);
+  font-family: "JetBrains Mono Variable", ui-monospace, monospace;
+  font-size: 0.74rem;
+  font-weight: 790;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.skills-stage-head h2 {
+  max-width: 11.5ch;
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(2.7rem, 5.25vw, 5.2rem);
+  font-weight: 910;
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+  text-wrap: balance;
+}
+
+.skills-stage-head p {
+  max-width: 57ch;
+  margin: 0;
+  color: oklch(0.32 0.034 255);
+  font-size: clamp(0.98rem, 1.16vw, 1.11rem);
+  font-weight: 580;
+  line-height: 1.72;
+  text-wrap: pretty;
+}
+
+.skills-core {
+  position: absolute;
+  left: 50%;
+  top: 48%;
+  z-index: 1;
+  display: grid;
+  width: min(38vw, 510px);
+  aspect-ratio: 1;
+  place-items: center;
+  color: oklch(0.57 0.17 252 / 0.28);
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+.skills-core i {
+  position: absolute;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+}
+
+.skills-core i:first-child {
+  inset: 0;
+}
+
+.skills-core i:nth-child(2) {
+  width: 112%;
+  height: 42%;
+  transform: rotate(-18deg);
+}
+
+.skills-core i:nth-child(3) {
+  width: 42%;
+  height: 112%;
+  transform: rotate(22deg);
+}
+
+.skills-core strong {
+  color: oklch(0.37 0.13 255 / 0.18);
+  font-size: clamp(7rem, 16vw, 13rem);
+  font-weight: 920;
+  letter-spacing: -0.04em;
+  line-height: 0.8;
+}
+
+.skills-core small {
+  position: absolute;
+  bottom: 24%;
+  color: oklch(0.34 0.1 255 / 0.56);
+  font-family: "JetBrains Mono Variable", ui-monospace, monospace;
+  font-size: 0.72rem;
+  font-weight: 820;
+  letter-spacing: 0.12em;
+}
+
+.skills-carousel {
+  position: relative;
+  z-index: 5;
+  display: grid;
+  width: min(1440px, calc(100vw - 72px));
+  height: clamp(560px, 70dvh, 760px);
+  place-items: center;
+  justify-self: center;
+  transform-style: preserve-3d;
+  cursor: grab;
+  outline: none;
+  touch-action: pan-y;
+  will-change: transform;
+}
+
+.skills-carousel:focus-visible {
+  outline: 2px solid oklch(0.6 0.18 145);
+  outline-offset: 12px;
+}
+
+.skills-carousel.is-dragging {
+  cursor: grabbing;
+}
+
+.skills-orbit {
+  position: absolute;
+  inset: 8% 0 4%;
+  z-index: 0;
+  pointer-events: none;
+  border: 1px solid oklch(0.22 0.03 255 / 0.1);
+  border-radius: 50%;
+  background: radial-gradient(circle, oklch(1 0 0 / 0.55), transparent 62%);
+  transform: rotate(-9deg) scaleX(0.86);
+}
+
+.skills-drag-handle {
+  position: absolute;
+  right: clamp(72px, 12vw, 150px);
+  bottom: clamp(18px, 4vw, 52px);
+  z-index: 9999;
+  display: grid;
+  width: 74px;
+  height: 74px;
+  place-items: center;
+  border: 1px solid oklch(1 0 0 / 0.15);
+  border-radius: 50%;
+  color: oklch(0.98 0.01 250);
+  font-family: "JetBrains Mono Variable", ui-monospace, monospace;
+  font-size: 0.78rem;
+  font-weight: 820;
+  letter-spacing: 0.02em;
+  background: oklch(0.13 0.02 255 / 0.92);
+  box-shadow: 0 8px 14px oklch(0.16 0.03 255 / 0.18);
+  opacity: 0;
+  transform: translateY(12px) scale(0.84);
+  transition:
+    opacity 280ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 360ms cubic-bezier(0.16, 1, 0.3, 1),
+    background 280ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.skills-carousel:hover .skills-drag-handle,
+.skills-carousel:focus-within .skills-drag-handle,
+.skills-carousel.is-dragging .skills-drag-handle {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.skills-drag-handle:hover {
+  background: oklch(0.22 0.04 255);
+}
+
+.skill-module {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  display: grid;
+  width: clamp(520px, 35vw, 780px);
+  min-height: clamp(510px, 62dvh, 680px);
+  align-content: space-between;
+  gap: 18px;
+  padding: clamp(22px, 3vw, 34px);
+  border: 1px solid oklch(1 0 0 / 0.13);
+  border-radius: 18px;
+  color: oklch(0.96 0.006 250);
+  background:
+    linear-gradient(145deg, oklch(0.18 0.026 255), oklch(0.1 0.018 255)),
+    oklch(0.12 0.02 255);
+  box-shadow: 0 18px 42px oklch(0.18 0.04 255 / 0.18);
+  overflow: hidden;
+  isolation: isolate;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  user-select: none;
+  backface-visibility: hidden;
+  will-change: transform, opacity;
+}
+
+.skill-module::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    radial-gradient(
+      circle at 84% 14%,
+      oklch(0.62 0.18 145 / 0.24),
+      transparent 9rem
+    ),
+    linear-gradient(
+      130deg,
+      transparent 0 62%,
+      oklch(1 0 0 / 0.08) 62% 63%,
+      transparent 63%
+    );
+  opacity: 0.75;
+}
+
+.skill-module::after {
+  position: absolute;
+  right: -28%;
+  bottom: -38%;
+  z-index: 0;
+  width: 82%;
+  aspect-ratio: 1;
+  content: "";
+  border-radius: 50%;
+  background: oklch(0.76 0.2 142 / 0.18);
+  filter: blur(24px);
+}
+
+.skill-module.is-active {
+  border-color: oklch(0.34 0.06 140 / 0.2);
+  color: oklch(0.13 0.02 150);
+  background:
+    linear-gradient(
+      145deg,
+      oklch(0.88 0.21 140),
+      oklch(0.78 0.2 135) 58%,
+      oklch(0.71 0.16 128)
+    ),
+    oklch(0.82 0.2 138);
+  box-shadow: 0 24px 42px oklch(0.29 0.1 150 / 0.2);
+  z-index: 99;
+}
+
+.skill-module.is-active::before {
+  opacity: 0;
+}
+
+.skill-module.is-active::after {
+  opacity: 0;
+}
+
+.skill-module-top {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.skill-module-top svg {
+  flex: 0 0 auto;
+  color: currentColor;
+}
+
+.skill-module small {
+  color: currentColor;
+  opacity: 0.78;
+}
+
+.skill-module em {
+  position: relative;
+  z-index: 2;
+  width: fit-content;
+  margin-top: auto;
+  color: currentColor;
+  font-family: "JetBrains Mono Variable", ui-monospace, monospace;
+  font-size: 0.68rem;
+  font-style: normal;
+  font-weight: 820;
+  letter-spacing: 0.09em;
+  opacity: 0.58;
+}
+
+.skill-module strong {
+  position: relative;
+  z-index: 2;
+  max-width: 10ch;
+  color: currentColor;
+  font-size: clamp(2.35rem, 4.15vw, 4.25rem);
+  font-weight: 920;
+  letter-spacing: -0.04em;
+  line-height: 0.88;
+  text-wrap: balance;
+}
+
+.skill-module p {
+  position: relative;
+  z-index: 2;
+  max-width: 34ch;
+  margin: 0;
+  color: currentColor;
+  font-size: clamp(0.96rem, 1vw, 1.06rem);
+  font-weight: 620;
+  line-height: 1.58;
+  opacity: 0.82;
+  text-wrap: pretty;
+}
+
+.skill-module > span {
+  position: relative;
+  z-index: 2;
+  display: block;
+  height: 5px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: currentColor;
+  opacity: 0.24;
+}
+
+.skill-module > span i {
+  display: block;
+  width: calc(66% + var(--skill-index) * 5%);
+  height: 100%;
+  border-radius: inherit;
+  background: currentColor;
+  transform-origin: left center;
+}
+
+.stack-console {
+  position: relative;
+  z-index: 6;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(180px, 0.22fr) minmax(0, 1fr);
+  gap: clamp(14px, 2.4vw, 30px);
+  align-items: center;
+  min-height: 104px;
+  padding: clamp(13px, 1.8vw, 20px);
+  border: 1px solid oklch(0.62 0.07 250 / 0.24);
+  border-radius: 14px;
+  background: oklch(1 0 0 / 0.7);
+  overflow: hidden;
+  backdrop-filter: blur(14px) saturate(1.12);
+  will-change: transform, opacity;
+}
+
+.stack-console > div:first-child {
+  display: grid;
+  gap: 7px;
+}
+
+.stack-console svg {
+  color: var(--blue);
+}
+
+.stack-console h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(1.28rem, 2.15vw, 2.12rem);
+  font-weight: 890;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+}
+
+.stack-marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    black 7%,
+    black 93%,
+    transparent
+  );
+}
+
+.stack-tags {
+  display: flex;
+  width: max-content;
+  gap: 9px;
+  will-change: transform;
+}
+
+.stack-tags span {
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
+  font-size: 0.82rem;
+  font-weight: 760;
+  background: oklch(1 0 0 / 0.78);
+  white-space: nowrap;
+}
+
+@media (max-width: 1180px) {
+  .skills-stage-shell {
+    width: min(1180px, calc(100vw - 32px));
+    gap: 24px;
+  }
+
+  .skills-carousel {
+    width: min(1060px, calc(100vw - 36px));
+    height: clamp(500px, 64dvh, 660px);
+  }
+
+  .skill-module {
+    width: clamp(460px, 56vw, 660px);
+  }
+}
+
+@media (max-width: 980px) {
+  .skills-stage {
+    height: auto;
+    min-height: 100dvh;
+    overflow: visible;
+  }
+
+  .skills-stage-shell {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: 100dvh;
+    padding: 72px 0;
+  }
+
+  .skills-stage-head h2 {
+    max-width: 13ch;
+  }
+
+  .skills-core {
+    left: 72%;
+    top: 31%;
+    width: min(72vw, 480px);
+  }
+
+  .skills-carousel {
+    display: grid;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    gap: 14px;
+    justify-self: stretch;
+    cursor: default;
+  }
+
+  .skills-orbit,
+  .skills-drag-handle {
+    display: none;
+  }
+
+  .skill-module,
+  .skill-module.is-active {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: min(100%, 680px);
+    min-height: 260px;
+    justify-self: center;
+    color: oklch(0.96 0.006 250);
+    background:
+      linear-gradient(145deg, oklch(0.18 0.026 255), oklch(0.1 0.018 255)),
+      oklch(0.12 0.02 255);
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    filter: none !important;
+  }
+
+  .skill-module strong {
+    max-width: 14ch;
+    font-size: clamp(2rem, 8vw, 3.3rem);
+  }
+}
+
+@media (max-width: 720px) {
+  .skills-stage-shell {
+    width: min(100vw - 28px, 640px);
+    padding: 72px 0;
+  }
+
+  .skills-stage-head h2 {
+    font-size: clamp(2.35rem, 12vw, 4.25rem);
+  }
+
+  .stack-console {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skills-stage-shell,
+  .skills-core,
+  .skill-module,
+  .stack-console,
+  .stack-tags {
+    transform: none !important;
+    clip-path: none !important;
+    animation: none !important;
+  }
+
+  .skills-drag-handle {
+    opacity: 1;
+    transform: none;
+  }
+}

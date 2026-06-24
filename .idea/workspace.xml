@@ -4,7 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dce32db-6aba-4873-ae46-07200eb5b2ca" name="更改" comment="" />
+    <list default="true" id="2dce32db-6aba-4873-ae46-07200eb5b2ca" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DESIGN.md" beforeDir="false" afterPath="$PROJECT_DIR$/DESIGN.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PRODUCT.md" beforeDir="false" afterPath="$PROJECT_DIR$/PRODUCT.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio-api/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio-api/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio-api/worker-configuration.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio-api/worker-configuration.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio-api/wrangler.jsonc" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio-api/wrangler.jsonc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AICapability.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AICapability.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContactBand.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactBand.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContactBand.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactBand.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ExperienceCompact.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ExperienceCompact.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ExperienceCompact.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ExperienceCompact.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hero.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hero.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/IndustryCockpit.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/IndustryCockpit.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/IndustryCockpit.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/IndustryCockpit.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LoadingOverlay.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoadingOverlay.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LoadingOverlay.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoadingOverlay.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Reveal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Reveal.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ScrollProgress.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ScrollProgress.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ScrollProgress.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ScrollProgress.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WebGLScene.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WebGLScene.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/portfolio.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/portfolio.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/portfolioApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/portfolioApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,10 +43,25 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Kevin-Jii"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Kevin-Jii/worklog.git",
+    "accountId": "f2ee61b5-028d-4161-b907-2230e844121a"
+  }
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 3
 }]]></component>
   <component name="ProjectId" id="3FQmBDMeV7stemcM0loLEeOq1Av" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -76,7 +121,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1782015529857</updated>
-      <workItem from="1782015530986" duration="1922000" />
+      <workItem from="1782015530986" duration="8125000" />
     </task>
     <servers />
   </component>

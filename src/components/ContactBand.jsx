@@ -1,5 +1,5 @@
 import { Stack } from "@phosphor-icons/react";
-import "./ContactBand.css";
+import "./css/ContactBand.css";
 
 export function ContactBand({ profile }) {
   return (
@@ -16,7 +16,7 @@ export function ContactBand({ profile }) {
           {profile.phone}
         </a>
       </div>
-      <p>© 2026 {profile.name}. Built with React, Tailwind CSS, Motion and WebGL.</p>
+      <p>© 2026 {profile.name}. Built with React, Tailwind CSS, Motion, GSAP and Cloudflare.</p>
     </footer>
   );
 }

@@ -1,17 +1,20 @@
 import React from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { AICapability } from "./components/AICapability";
 import { ContactBand } from "./components/ContactBand";
+import { DockNav } from "./components/DockNav";
 import { ExperienceCompact } from "./components/ExperienceCompact";
-import { Hero } from "./components/Hero";
-import { IndustryCockpit } from "./components/IndustryCockpit";
 import { LoadingOverlay } from "./components/LoadingOverlay";
-import { Navigation } from "./components/Navigation";
-import { ScrollProgress } from "./components/ScrollProgress";
+import { PortfolioIntro } from "./components/PortfolioIntro";
+import { ResumeDetails } from "./components/ResumeDetails";
+import { ScrollChoreography } from "./components/ScrollChoreography";
+import { SkillsStage } from "./components/SkillsStage";
 import { loadPortfolio } from "./services/portfolioApi";
 import fallbackPortfolio from "./data/portfolio.json";
 
 export function App() {
   const [portfolio, setPortfolio] = React.useState(fallbackPortfolio);
+  const pageRef = React.useRef(null);
 
   React.useEffect(() => {
     let cancelled = false;
@@ -19,6 +22,7 @@ export function App() {
     loadPortfolio().then((nextPortfolio) => {
       if (!cancelled) {
         setPortfolio(nextPortfolio);
+        window.requestAnimationFrame(() => ScrollTrigger.refresh());
       }
     });
 
@@ -27,20 +31,23 @@ export function App() {
     };
   }, []);
 
-  const { profile, industries, aiFlow, experiences, stack } = portfolio;
+  const { profile, industries, aiFlow, experiences, stack, skills, projects, education } = portfolio;
 
   return (
     <>
       <LoadingOverlay />
-      <Navigation profile={profile} />
-      <ScrollProgress />
-      <main>
-        <Hero profile={profile} />
-        <IndustryCockpit industries={industries} />
-        <AICapability aiFlow={aiFlow} />
-        <ExperienceCompact experiences={experiences} stack={stack} />
-        <ContactBand profile={profile} />
-      </main>
+      <DockNav />
+      <div id="smooth-wrapper" className="smooth-wrapper">
+        <main id="smooth-content" className="scroll-page" ref={pageRef}>
+          <PortfolioIntro profile={profile} />
+          <ExperienceCompact experiences={experiences} />
+          <SkillsStage skills={skills} stack={stack} />
+          <ResumeDetails projects={projects} education={education} />
+          <AICapability aiFlow={aiFlow} />
+          <ContactBand profile={profile} />
+        </main>
+      </div>
+      <ScrollChoreography scope={pageRef} />
     </>
   );
 }

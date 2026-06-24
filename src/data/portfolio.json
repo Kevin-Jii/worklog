@@ -4,69 +4,374 @@
     "initials": "JKW",
     "role": "前端开发工程师",
     "location": "浙江杭州",
+    "birthday": "1999.07.19",
     "phone": "18336333673",
     "email": "jeckwell@126.com",
-    "summary": "我把前端、跨端、硬件 SDK、后端接口和 AI 辅助研发拧成可交付的业务界面。"
+    "blog": "jeckwell.info",
+    "summary": "4 年前端与跨端开发经验，长期在医疗急救、智慧城市、零售供应链项目中交付复杂业务界面，能把前端工程化、硬件 SDK、第三方服务、后端接口和 AI 辅助研发组合成可落地的系统。"
   },
   "industries": [
     {
       "key": "medical",
       "label": "医疗",
-      "title": "急诊管理平台",
+      "title": "急诊与急救系统矩阵",
       "icon": "FirstAidKit",
-      "stack": "Vue2 / TinyMCE / WebSocket / PDA / C-Lodop",
-      "body": "围绕多院区急救现场做流程界面、PDA 扫码、离线缓存、打印集成和设备适配，让护理和急诊记录更接近无纸化闭环。",
-      "signals": ["PDA 扫码", "多院区复用", "打印签名链路"]
+      "stack": "Vue2 / uni-app / TinyMCE / WebSocket / AES / C-Lodop / 锐浪报表",
+      "body": "参与急诊、急救管理系统与阿克苏危急重症响应平台，覆盖 6+ 院区和 13+ 项目。负责 PDA 扫码、CA 数字签名、动态表单、报表打印、AES 加密、微信和企业微信 SDK、钉钉小程序等关键模块。",
+      "signals": ["6+ 院区", "13+ 项目", "PDA SDK", "CA 签名"]
     },
     {
       "key": "city",
       "label": "智慧城市",
-      "title": "设备与数据协同界面",
+      "title": "IBMS 与美丽乡村大屏",
       "icon": "City",
-      "stack": "WebSocket / Device SDK / Nginx / Linux",
-      "body": "把设备状态、实时消息、第三方服务和前端操作台连起来，适合城市级多端协同、现场设备接入和数据流转类项目。",
-      "signals": ["实时链路", "设备接入", "跨端操作台"]
+      "stack": "Vue2 / uni-app / Cesium / ECharts / M3U8 / 3D Max",
+      "body": "在智慧大厦和美丽乡村项目中完成 APP 动态表单、Web GIS 大屏、3D 建模场景接入、海康威视 M3U8 流媒体对接和地图性能优化。",
+      "signals": ["Web GIS", "Cesium", "动态表单", "流媒体"]
     },
     {
       "key": "retail",
       "label": "零售",
       "title": "Tower 餐饮供应链中心",
       "icon": "Storefront",
-      "stack": "Go Gin / Flutter / Redis / MySQL / RustFS",
-      "body": "独立构建餐饮供应链管理中心，覆盖 RBAC、库存预警、对象存储、桌面端管理和 DingTalk Robot 自动通知。",
-      "signals": ["库存预警", "多租户权限", "桌面端管理"]
+      "stack": "Golang Gin / Flutter / Redis / MySQL / RustFS / WebSocket / JWT",
+      "body": "独立构建 Tower 餐饮供应链管理中心，覆盖供应商到门店的闭环管理、RBAC 权限、库存预警、对象存储、DingTalk Robot 自动通知和跨平台桌面端管理。",
+      "signals": ["独立开发", "RBAC", "库存预警", "研发周期 -40%"]
     }
   ],
   "aiFlow": [
     {
-      "title": "架构拆解",
-      "body": "用 Claude Code 做模块边界、重构路径和复杂交互方案推演。",
+      "title": "架构设计",
+      "body": "深度整合 Claude Code 与 OpenClaw，用 AI 参与模块边界、分层架构和复杂交互方案推演。",
       "icon": "Brain"
     },
     {
-      "title": "识别与设备",
-      "body": "结合 OpenCV、PDA、蓝牙设备和签名板，把 AI 能力放进真实业务流程。",
+      "title": "重构提效",
+      "body": "在 tower-go 等项目中让 AI 辅助大规模代码重构和接口设计，从 0 到 1 研发周期缩短约 40%。",
       "icon": "Cpu"
     },
     {
-      "title": "调试提效",
-      "body": "让 AI 参与问题定位、接口联调、组件抽离和交付文档整理。",
+      "title": "交付闭环",
+      "body": "用 AI 支持问题定位、组件抽离、联调排障和交付文档整理，让复杂业务更快进入可验证状态。",
       "icon": "Robot"
+    }
+  ],
+  "skills": [
+    {
+      "title": "前端开发",
+      "body": "ES6+、Vue、React、uni-app、uni-app X，快速搭建 PC、H5、跨端应用。"
+    },
+    {
+      "title": "多平台交付",
+      "body": "企业微信、钉钉、微信小程序、uni-app 离线打包，交付浙里办、浙政钉等平台项目。"
+    },
+    {
+      "title": "硬件与第三方集成",
+      "body": "基站、蓝牙手环、CA 签字板、PDA 扫码、阿里云 Voice Service、Webhook Robot、C-Lodop、锐浪报表。"
+    },
+    {
+      "title": "工程化与安全",
+      "body": "Webpack、DLL 缓存、打包指纹、Nginx 反向代理、AES 加密、三级等保漏洞处理。"
+    },
+    {
+      "title": "后端基础",
+      "body": "Golang RESTful API、Linux/Nginx 部署、MySQL 基础查询。"
     }
   ],
   "experiences": [
     {
-      "period": "2023.03 - 2024.04",
-      "company": "杭州久巨通商贸有限公司",
+      "period": "2025.03 - 2026.04",
+      "company": "杭州久亨巨通商贸有限公司",
       "role": "独立开发者",
-      "detail": "Tower 餐饮供应链中心，跨平台桌面端、后端接口、库存预警和权限体系。"
+      "detail": "围绕零售啤酒品牌做门店数字化转型，基于 Go Gin 与 Flutter 自研 Tower 餐饮供应链管理中心，实现供应商、门店、库存、权限和自动通知闭环。"
     },
     {
-      "period": "2022.11 - 2023.02",
-      "company": "杭州健康科技",
+      "period": "2022.11 - 2025.02",
+      "company": "杭州健景科技有限公司",
       "role": "前端开发工程师",
-      "detail": "医疗系统前端、多院区复用、PDA 扫码 SDK、打印与设备集成。"
+      "detail": "参与急诊、急救管理系统、阿克苏快速救治平台、营养膳食点餐、院区党建互评、医务管理、浙大口腔 HIS 等 13+ 项目，主导多院区复用、PDA SDK、CA 签名、动态表单和报表打印。"
+    },
+    {
+      "period": "2021.03 - 2022.09",
+      "company": "浙江同际智慧科技有限公司",
+      "role": "前端开发工程师",
+      "detail": "参与智慧化工管理系统、IBMS 智慧大厦和美丽乡村大屏，主导 IBMS APP 动态表单插件，维护 Cesium Web GIS 大屏并完成海康 M3U8 流媒体对接。"
     }
   ],
-  "stack": ["React", "Vue", "TypeScript", "uni-app", "Golang", "MySQL", "Redis", "Docker"]
+  "projects": [
+    {
+      "title": "Tower 餐饮供应链管理中心",
+      "period": "2025.11 - 至今",
+      "role": "全栈开发（个人项目）",
+      "platforms": "Desktop / Mobile",
+      "industry": "零售供应链",
+      "stack": "Golang Gin / Flutter / Redis / MySQL / RustFS / WebSocket / JWT",
+      "github": "https://github.com/Kevin-Jii/tower-go",
+      "githubLabel": "tower-go",
+      "summary": "个人全栈项目，围绕餐饮供应链完成从供应商、门店、库存、权限到自动化通知的业务闭环。",
+      "description": "个人项目，采用 Routing-Controller-Service-DAO 分层架构，完成 RBAC、多门店权限、库存预警、对象存储、JWT 认证和钉钉 Webhook 自动化推送。",
+      "highlights": ["供应商到门店闭环", "多角色权限隔离", "办公自动化集成"],
+      "responsibilities": [
+        {
+          "title": "分层架构设计",
+          "body": "采用标准 Routing-Controller-Service-DAO 分层架构，确保业务逻辑清晰、接口职责明确并保持高可维护性。"
+        },
+        {
+          "title": "RBAC 权限模型",
+          "body": "设计并实现基于角色的访问控制系统，满足管理员、财务、采购员等多角色、多门店的精细化权限隔离。"
+        },
+        {
+          "title": "高性能存储与通信",
+          "body": "利用 Redis 处理高频业务缓存，提升查询效率；集成 RustFS 对象存储管理物料与凭证图片。"
+        },
+        {
+          "title": "安全与认证",
+          "body": "使用 JWT 实现无状态身份验证方案，保障 Desktop 与 Mobile 跨平台调用安全性。"
+        },
+        {
+          "title": "自动化集成",
+          "body": "封装钉钉 Webhook 机器人，建立自动化监控与报表推送机制，将后端业务逻辑与办公即时通讯工具深度绑定。"
+        }
+      ]
+    },
+    {
+      "title": "急诊管理系统",
+      "period": "2022.11 - 至今",
+      "role": "PC 端参与开发，PDA 独立开发",
+      "platforms": "PC / PDA / 钉钉小程序",
+      "industry": "医疗急诊",
+      "stack": "Vue2 / TinyMCE / WebSocket / BJCA / C-Lodop / 锐浪报表",
+      "summary": "多院区标准版代码复用项目，通过平台跳板区分院区，配合急救管理系统完成患者分诊和信息处理，最大程度实现无纸化办公。",
+      "description": "本项目是多院区共用同一套标准版代码，通过平台跳板区分院区。项目主要对患者进行分诊断并配合急救管理系统，快速处理患者信息，为急诊科医生提供便利。",
+      "highlights": ["7 个分支合并", "医疗文书数字认证", "多院区组件化差异处理"],
+      "responsibilities": [
+        {
+          "title": "WebSocket 硬件对接",
+          "body": "利用 Socket 消息通道将套壳浏览器与硬件设备对接，实现患者信息读卡功能。"
+        },
+        {
+          "title": "锐浪报表信息统计",
+          "body": "优化报表模板，实现可配置化封装，避免静态文件占用项目空间并减小项目体积。"
+        },
+        {
+          "title": "北京 CA 写字板",
+          "body": "开发 TinyMCE 插件，对接北京 CA 数字签名系统，完成患者医疗文书的数字认证。"
+        },
+        {
+          "title": "项目优化",
+          "body": "整合 7 个分支代码为一套可复用代码，并与团队共同制定代码和文件命名规范。"
+        },
+        {
+          "title": "组件化开发",
+          "body": "针对多院区共用代码的定制化需求，对项目页面进行组件化区分，满足各院区差异。"
+        },
+        {
+          "title": "高阶函数",
+          "body": "运用函数重载等高阶函数，重写多院区、多页面方法，提升代码可读性。"
+        },
+        {
+          "title": "设计模式",
+          "body": "根据不同业务场景应用单例模式、工厂模式、状态机等设计模式。"
+        }
+      ]
+    },
+    {
+      "title": "急救管理系统",
+      "period": "2022.11 - 至今",
+      "role": "PC、APP、微信和钉钉小程序开发",
+      "platforms": "PC / APP / 钉钉小程序 / 微信小程序",
+      "industry": "医疗急救",
+      "stack": "Vue2 / uni-app / AES / WebSocket / 数据大屏 / OCR / Android",
+      "summary": "实时展示胸痛、卒中、创伤等疾病状态和时间轴，覆盖 120 待抢救、抢救室状态、移动端加密、多端小程序和硬件扫码。",
+      "description": "主要负责 PC、APP、微信和钉钉小程序开发，围绕急救场景完成实时状态流转、身份识别、多端复用和移动端安全交互。",
+      "highlights": ["三级等保加密", "实时救治大屏", "多端一套代码复用"],
+      "responsibilities": [
+        {
+          "title": "WebSocket 实时大屏",
+          "body": "利用 Socket 消息通道，在数据大屏实时显示患者胸痛、卒中、创伤等疾病情况，以及时间轴、120 待抢救和抢救室状态。"
+        },
+        {
+          "title": "AES 数据加密",
+          "body": "移动端公网 IP 项目采用 AES 数据加密方式，解决前端三级等保问题，保障数据安全。"
+        },
+        {
+          "title": "微信 SDK",
+          "body": "H5 页面引入微信 SDK，对接微信免密登录、扫码、定位等功能。"
+        },
+        {
+          "title": "OCR 身份识别",
+          "body": "对接百度云 API，实现患者身份证和社保卡身份信息快速识别，加快急救过程中的信息录入。"
+        },
+        {
+          "title": "钉钉 / 微信小程序",
+          "body": "通过统一封装和兼容处理，整合钉钉自建应用和微信自建应用，实现一套代码适配多平台。"
+        },
+        {
+          "title": "企业微信 SDK",
+          "body": "优化企业微信 SDK 初始化流程，通过工厂模式封装，提高代码复用性和维护性。"
+        },
+        {
+          "title": "动态表单",
+          "body": "利用 JS 高阶函数进行组件递归封装，实现表单配置化，并结合锐浪报表完成表单打印。"
+        },
+        {
+          "title": "Android 广播",
+          "body": "通过安装基站，利用 Android 原生广播动作扫描手环及 PDA 扫码动作。"
+        }
+      ]
+    },
+    {
+      "title": "阿克苏危急重症响应平台",
+      "period": "2023.11 - 2024.03",
+      "role": "PC 与钉钉小程序独立开发",
+      "platforms": "PC / 钉钉小程序",
+      "industry": "医疗响应",
+      "stack": "Vue2 / 阿里云呼叫 / ECharts / qrCode / AES / uni-app",
+      "summary": "对接院内 HIS 系统，快速拉起危急重症响应子系统，完成抢救任务、会诊任务和科室电话云呼叫提醒。",
+      "description": "本项目主要是对患者抢救的快速响应平台，对接院内 HIS 系统，对患者快速做出系统响应。",
+      "highlights": ["阿里云电话", "HIS 对接", "抢救任务提醒"],
+      "responsibilities": [
+        {
+          "title": "项目搭建",
+          "body": "使用若依框架快速拉起急救项目独立子系统。"
+        },
+        {
+          "title": "数据加密",
+          "body": "钉钉小程序采用 AES 加密算法对数据格式加密，确保数据交互安全。"
+        },
+        {
+          "title": "阿里云电话",
+          "body": "通过网关配合后端服务，实现医疗组科室电话云呼叫，及时提醒医生处理会诊任务和抢救任务。"
+        }
+      ]
+    },
+    {
+      "title": "杭州第九人民医院党建互评系统",
+      "period": "2023.04 - 2023.08",
+      "role": "独立开发",
+      "platforms": "PC",
+      "industry": "医院信息化",
+      "stack": "Vue3 / Vite / Element Plus / ECharts / qrCode / 文件导出",
+      "summary": "独立开发杭州第九人民医院党建互评系统，参与杭州红十字会医院党建系统开发，完成文件导出、页面框架、接口封装和扫码查询。",
+      "description": "独立开发杭州第九人民医院党建互评系统，参与杭州红十字会医院党建系统开发。",
+      "highlights": ["前端 Excel 导出", "扫码查询", "Vite 项目搭建"],
+      "responsibilities": [
+        {
+          "title": "文件导出",
+          "body": "使用前端实现 Excel 文件导出，减少服务端 API 请求并减轻服务器负担。"
+        },
+        {
+          "title": "项目搭建",
+          "body": "使用 Vite 创建项目，VueRouter 构建路由，结合 Element Plus 和 Scss 搭建页面框架。"
+        },
+        {
+          "title": "文件封装",
+          "body": "使用 Setup 语法糖模式组织代码逻辑，并封装 Axios 请求接口，便于后期管理维护。"
+        },
+        {
+          "title": "信息查询",
+          "body": "使用 Qrcode 二维码扫码功能实现掌上信息查询，简化用户操作流程，提高查询效率。"
+        }
+      ]
+    },
+    {
+      "title": "化工综合管理平台",
+      "period": "2023.11 - 2024.03",
+      "role": "APP 端独立开发",
+      "platforms": "uni-app",
+      "industry": "智慧化工",
+      "stack": "Vue2 / uni-app / 动态表单",
+      "summary": "服务江苏永城、汉陵、泰松、蓝丰四家化工厂，实现 8 种作业安全票、在线设备报修和安全责任书无纸化办公。",
+      "description": "本项目由江苏永城、汉陵、泰松、蓝丰四家化工厂联合开发，旨在实现 8 种作业安全票、在线设备报修和安全责任书的无纸化办公。",
+      "highlights": ["8 类作业安全票", "动态表单", "无纸化签字"],
+      "responsibilities": [
+        {
+          "title": "动态组件",
+          "body": "通过对前端动态表单进行封装和处理，提高开发效率。"
+        },
+        {
+          "title": "组件抽离",
+          "body": "提供可重用组件和功能，节省开发时间和精力，并支持 PC 端配置表单内容。"
+        }
+      ]
+    },
+    {
+      "title": "美丽乡村服务信息大屏",
+      "period": "2022.04 - 2022.09",
+      "role": "维护与优化",
+      "platforms": "PC",
+      "industry": "智慧城市",
+      "stack": "Vue2 / Cesium / ECharts / 3D Max 建模",
+      "summary": "江苏常州红旗村信息服务平台，用于统计外出务工、党员网格、贫困五保户、疫情管控和核酸数据，并以 1:1 比例还原住宅环境。",
+      "description": "本项目是江苏常州红旗村的信息服务平台，主要用于统计外出务工人员、党员网格、贫困五保户、疫情管控和核酸统计，并使用建模技术以 1:1 比例还原住宅环境。",
+      "highlights": ["Cesium Web GIS", "3D 场景", "地图加载优化"],
+      "responsibilities": [
+        {
+          "title": "项目优化",
+          "body": "进行组件拆分抽离，对组件文件进行隔离。"
+        },
+        {
+          "title": "代码优化",
+          "body": "优化地图加载速度，减少碎片加载时间，封装常用 API 并清除冗余代码。"
+        }
+      ]
+    },
+    {
+      "title": "农商直通 / 产销一体化二期",
+      "period": "项目经历",
+      "role": "H5 开发",
+      "platforms": "浙里办 H5",
+      "industry": "智慧农业",
+      "stack": "Vue2 / 数据报表 / 浙政钉看板 / 实时监控",
+      "summary": "促进农业发展，打造农商与农户产销对接综合平台，并提供农民农业技术培训与相关服务。",
+      "description": "该项目旨在促进农业发展，打造综合平台，涵盖农商与农户产销对接信息，同时提供农民农业技术培训与相关服务。平台配备产销一体化数据报表，并与浙政钉三农检测数据看板对接，进行实时数据监控。",
+      "highlights": ["浙里办 H5", "产销对接", "实时数据监控"],
+      "responsibilities": [
+        {
+          "title": "产销数据展示",
+          "body": "围绕农商与农户产销对接信息搭建 H5 页面，承载农业服务和培训信息。"
+        },
+        {
+          "title": "报表与看板对接",
+          "body": "对接产销一体化数据报表与浙政钉三农检测数据看板，实现实时监控。"
+        }
+      ]
+    },
+    {
+      "title": "西溪银泰报表后台",
+      "period": "项目经历",
+      "role": "后台报表开发",
+      "platforms": "PC",
+      "industry": "零售数据",
+      "stack": "Vue2 / ECharts / 钉钉推送 / 海康摄像数据",
+      "summary": "通过海康摄像硬件数据算法进行人流量统计，为前台数据提供支撑，并实时更新报表项目推送到钉钉。",
+      "description": "该项目主要通过硬件海康摄像的数据算法进行人流量统计，为前台业务数据提供支撑，同时实时更新报表项目并推送到钉钉。",
+      "highlights": ["人流量统计", "实时报表", "钉钉推送"],
+      "responsibilities": [
+        {
+          "title": "硬件数据报表",
+          "body": "基于海康摄像数据算法输出人流量统计结果，为前台运营数据提供支撑。"
+        },
+        {
+          "title": "实时推送",
+          "body": "维护报表实时更新链路，并将核心数据推送到钉钉。"
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "period": "2024.03 - 2026.07",
+      "school": "河南科技职业大学",
+      "major": "计算机应用工程",
+      "degree": "专升本"
+    },
+    {
+      "period": "2019.03 - 2022.07",
+      "school": "河南轻工职业学院",
+      "major": "软件工程",
+      "degree": "专科"
+    }
+  ],
+  "stack": ["Vue2", "Vue3", "React", "uni-app", "uni-app X", "JavaScript ES6+", "Golang", "Flutter", "MySQL", "Redis", "Nginx", "Webpack", "Cesium", "ECharts", "WebSocket", "JWT", "AES", "Docker"]
 }

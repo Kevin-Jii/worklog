@@ -1,20 +1,20 @@
 .ai-section {
   width: min(1240px, calc(100vw - 36px));
   margin: 0 auto;
-  padding: clamp(54px, 9vw, 106px) 0;
+  padding: clamp(26px, 5vh, 58px) 0;
 }
 
 .ai-stage {
   display: grid;
-  grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
-  gap: clamp(28px, 6vw, 80px);
+  grid-template-columns: minmax(220px, 0.45fr) minmax(0, 1fr);
+  gap: clamp(24px, 5vw, 64px);
   align-items: center;
-  padding: clamp(24px, 4vw, 52px);
-  border: 1px solid oklch(0.92 0.02 155 / 0.1);
+  padding: clamp(24px, 4vw, 54px);
+  border: 1px solid var(--line);
   border-radius: var(--radius-panel);
   background:
-    radial-gradient(circle at 28% 48%, oklch(0.65 0.15 145 / 0.2), transparent 18rem),
-    linear-gradient(135deg, oklch(0.15 0.014 155 / 0.94), oklch(0.08 0 0 / 0.94));
+    radial-gradient(circle at 28% 48%, oklch(0.58 0.18 255 / 0.12), transparent 18rem),
+    oklch(1 0 0 / 0.84);
 }
 
 .ai-mark-wrap {
@@ -25,10 +25,10 @@
 .ai-mark {
   position: relative;
   display: grid;
-  width: min(310px, 72vw);
+  width: min(260px, 66vw);
   aspect-ratio: 1;
   place-items: center;
-  color: var(--primary);
+  color: var(--blue);
 }
 
 .ai-mark::before {
@@ -36,7 +36,7 @@
   inset: 25%;
   content: "";
   border-radius: 50%;
-  background: oklch(0.65 0.15 145 / 0.16);
+  background: oklch(0.58 0.18 255 / 0.14);
   filter: blur(18px);
 }
 
@@ -48,7 +48,7 @@
 .ai-mark i {
   position: absolute;
   inset: 0;
-  border: 1px solid oklch(0.65 0.15 145 / 0.28);
+  border: 1px solid oklch(0.58 0.18 255 / 0.28);
   border-radius: 50%;
 }
 
@@ -58,7 +58,7 @@
 
 .ai-mark i:nth-of-type(2) {
   transform: rotateY(68deg);
-  border-color: oklch(0.72 0.125 58 / 0.26);
+  border-color: oklch(0.68 0.13 220 / 0.36);
 }
 
 .ai-mark i:nth-of-type(3) {
@@ -73,6 +73,7 @@
 
 .ai-copy h2 {
   margin: 0;
+  color: var(--ink);
   font-size: clamp(2.05rem, 4.8vw, 4.55rem);
   font-weight: 840;
   letter-spacing: -0.04em;
@@ -92,26 +93,33 @@
 .ai-flow {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
+  gap: 0;
   margin-top: 6px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-panel);
+  overflow: hidden;
 }
 
 .ai-flow article {
   display: grid;
   align-content: start;
-  min-height: 168px;
+  min-height: 142px;
   gap: 12px;
   padding: 18px;
-  border: 1px solid oklch(0.92 0.02 155 / 0.1);
-  border-radius: 14px;
-  background: oklch(0.1 0.006 155 / 0.58);
+  border-right: 1px solid var(--line);
+  background: oklch(1 0 0 / 0.54);
+}
+
+.ai-flow article:last-child {
+  border-right: 0;
 }
 
 .ai-flow svg {
-  color: var(--primary);
+  color: var(--blue);
 }
 
 .ai-flow strong {
+  color: var(--ink);
   font-size: 1rem;
 }
 

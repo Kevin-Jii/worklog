@@ -1,0 +1,404 @@
+.experience-section {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  overflow: visible;
+}
+
+.experience-shell {
+  display: grid;
+  width: 100%;
+  gap: clamp(22px, 4vw, 48px);
+}
+
+.experience-head {
+  display: grid;
+  max-width: 860px;
+  gap: 10px;
+}
+
+.experience-head > span,
+.career-phase span,
+.career-copy small,
+.career-proof span {
+  color: var(--blue-strong);
+  font-family: "JetBrains Mono Variable", ui-monospace, monospace;
+  font-size: 0.76rem;
+  font-weight: 760;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.experience-head h2 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(2.3rem, 5.7vw, 5.75rem);
+  font-weight: 840;
+  letter-spacing: -0.038em;
+  line-height: 0.94;
+  text-wrap: balance;
+}
+
+.experience-head p,
+.career-copy p,
+.career-proof p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.66;
+  text-wrap: pretty;
+}
+
+.experience-head p {
+  max-width: 66ch;
+  font-size: clamp(1rem, 1.35vw, 1.16rem);
+}
+
+.career-horizontal {
+  position: relative;
+  width: 100vw;
+  height: 100dvh;
+  min-height: 620px;
+  overflow: hidden;
+  background:
+    linear-gradient(115deg, transparent 0 calc(var(--career-progress-x, 0%) - 1px), oklch(0.58 0.18 255 / 0.12) var(--career-progress-x, 0%), transparent calc(var(--career-progress-x, 0%) + 1px)),
+    linear-gradient(90deg, oklch(0.988 0.002 250), oklch(0.952 0.02 250) 48%, oklch(0.992 0.002 250));
+}
+
+.career-horizontal::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(90deg, oklch(0.2 0.03 255 / 0.07) 1px, transparent 1px),
+    linear-gradient(0deg, oklch(0.2 0.03 255 / 0.045) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(circle at 52% 48%, black 0 38%, transparent 72%);
+  opacity: 0.44;
+}
+
+.career-track {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: max-content;
+  height: 100%;
+  gap: 0;
+  align-items: stretch;
+  will-change: transform;
+}
+
+.career-panel {
+  position: relative;
+  display: grid;
+  flex: 0 0 100vw;
+  width: 100vw;
+  height: 100%;
+  min-height: 620px;
+  place-items: center;
+  padding: clamp(20px, 4vw, 56px);
+  overflow: hidden;
+  will-change: transform, opacity;
+}
+
+.career-panel::after {
+  position: absolute;
+  right: clamp(10px, 3vw, 44px);
+  bottom: clamp(28px, 7vw, 86px);
+  z-index: 0;
+  color: oklch(0.46 0.18 255 / 0.105);
+  font-size: clamp(9rem, 26vw, 24rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 0.65;
+  content: attr(data-panel-index);
+  transform: translate3d(var(--phase-shift, 0), 0, 0);
+  will-change: transform;
+}
+
+.career-panel-inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  width: min(1320px, calc(100vw - 36px));
+  min-height: min(760px, calc(100dvh - 88px));
+  align-content: center;
+  gap: clamp(22px, 4vw, 46px);
+  transform-style: preserve-3d;
+  will-change: transform, opacity, clip-path;
+}
+
+.career-panel-intro .career-panel-inner {
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.38fr);
+  align-items: end;
+}
+
+.career-route {
+  display: grid;
+  gap: 12px;
+  align-self: end;
+}
+
+.career-route span {
+  display: flex;
+  min-height: 74px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 0 clamp(16px, 2.6vw, 24px);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  color: var(--ink);
+  font-size: clamp(1.04rem, 1.6vw, 1.45rem);
+  font-weight: 790;
+  letter-spacing: -0.025em;
+  background: oklch(1 0 0 / 0.74);
+  transform-origin: right center;
+  transition:
+    background 360ms cubic-bezier(0.16, 1, 0.3, 1),
+    color 360ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 480ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.career-route span:hover {
+  color: var(--blue-strong);
+  background: var(--blue-soft);
+  transform: translateX(-10px) scaleX(1.025);
+}
+
+.career-route i {
+  color: var(--blue-strong);
+  font-family: "JetBrains Mono Variable", ui-monospace, monospace;
+  font-size: 0.78rem;
+  font-style: normal;
+  letter-spacing: 0.08em;
+}
+
+.career-phase {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  max-width: 100%;
+}
+
+.career-phase small {
+  color: var(--muted);
+  font-family: "JetBrains Mono Variable", ui-monospace, monospace;
+  font-size: 0.8rem;
+  font-weight: 760;
+}
+
+.career-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-panel);
+  background: oklch(1 0 0 / 0.78);
+}
+
+.career-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.34fr);
+  gap: clamp(18px, 4vw, 54px);
+  min-height: clamp(420px, 62dvh, 610px);
+  align-items: end;
+  padding: clamp(24px, 5vw, 64px);
+  background:
+    linear-gradient(112deg, oklch(1 0 0 / 0.98) 0 44%, oklch(0.984 0.006 250 / 0.94) 60%, oklch(0.93 0.045 250 / 0.74) 100%),
+    white;
+  box-shadow: 0 8px 14px oklch(0.2 0.025 255 / 0.08);
+  overflow: hidden;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  will-change: transform, opacity, clip-path;
+  transition:
+    border-color 420ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 420ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.career-card::before {
+  position: absolute;
+  inset: 22px;
+  z-index: 1;
+  pointer-events: none;
+  content: "";
+  border: 1px solid oklch(0.56 0.17 255 / 0.14);
+}
+
+.career-card::after {
+  position: absolute;
+  inset: 0 0 auto auto;
+  width: min(44%, 560px);
+  height: min(58%, 430px);
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(90deg, oklch(1 0 0 / 0.78), oklch(1 0 0 / 0.05) 34%, oklch(1 0 0 / 0.16)),
+    linear-gradient(180deg, oklch(1 0 0 / 0.02), oklch(1 0 0 / 0.88)),
+    var(--career-bg);
+  background-position: center;
+  background-size: cover;
+  filter: saturate(0.86) contrast(1.06);
+  opacity: 0.82;
+  mask-image: linear-gradient(90deg, transparent 0, black 24%), linear-gradient(180deg, black 0 58%, transparent 100%);
+  mask-composite: intersect;
+  transform: translate3d(0, 0, -20px) scale(1.02);
+}
+
+.career-card-city::after {
+  filter: saturate(0.92) contrast(1.08) hue-rotate(4deg);
+}
+
+.career-card-medical::after {
+  filter: saturate(0.74) contrast(1.08) hue-rotate(-8deg);
+}
+
+.career-card-supply::after {
+  filter: saturate(0.82) contrast(1.04) hue-rotate(10deg);
+}
+
+.career-card.is-active {
+  border-color: oklch(0.58 0.18 255 / 0.3);
+  box-shadow: 0 14px 26px oklch(0.22 0.04 255 / 0.13);
+}
+
+.career-card.is-active::before {
+  border-color: oklch(0.56 0.17 255 / 0.24);
+}
+
+.career-copy {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  max-width: 50rem;
+  gap: 16px;
+  will-change: transform, opacity;
+  transform: translateZ(30px);
+}
+
+.career-copy small {
+  width: fit-content;
+  padding: 5px 9px;
+  border: 1px solid oklch(0.58 0.18 255 / 0.18);
+  border-radius: 999px;
+  color: var(--blue-strong);
+  background: oklch(0.92 0.055 250 / 0.46);
+}
+
+.career-copy h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(2.5rem, 5.65vw, 5.6rem);
+  font-weight: 890;
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+  text-wrap: balance;
+}
+
+.career-copy b {
+  width: fit-content;
+  color: oklch(0.29 0.032 255);
+  font-size: clamp(1.06rem, 1.55vw, 1.34rem);
+  font-weight: 840;
+  letter-spacing: -0.02em;
+}
+
+.career-copy p {
+  max-width: 66ch;
+  color: oklch(0.39 0.032 255);
+  font-size: clamp(1rem, 1.2vw, 1.12rem);
+  font-weight: 560;
+  line-height: 1.72;
+}
+
+.career-proof {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  align-self: stretch;
+  align-content: end;
+  gap: 12px;
+  padding: clamp(16px, 2.5vw, 24px);
+  border: 1px solid oklch(0.58 0.18 255 / 0.14);
+  border-radius: 12px;
+  background: linear-gradient(180deg, oklch(1 0 0 / 0.54), oklch(1 0 0 / 0.78));
+  backdrop-filter: blur(16px) saturate(1.15);
+  transform: translateZ(46px);
+}
+
+.career-proof span {
+  color: oklch(0.45 0.18 255);
+}
+
+.career-proof strong {
+  color: oklch(0.19 0.02 255);
+  font-size: clamp(1.6rem, 2.7vw, 2.42rem);
+  font-weight: 880;
+  letter-spacing: -0.035em;
+  line-height: 1;
+}
+
+.career-proof p {
+  color: oklch(0.36 0.03 255);
+  font-weight: 560;
+}
+
+@media (max-width: 980px) {
+  .career-horizontal {
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .career-horizontal::before {
+    background-size: 52px 52px;
+  }
+
+  .career-track {
+    display: grid;
+    width: 100%;
+    height: auto;
+  }
+
+  .career-panel {
+    width: 100%;
+    min-height: 100dvh;
+    height: auto;
+    padding: clamp(22px, 7vw, 42px) 18px;
+  }
+
+  .career-panel-inner,
+  .career-panel-intro .career-panel-inner,
+  .career-card {
+    grid-template-columns: 1fr;
+  }
+
+  .career-card {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 680px) {
+  .experience-head h2,
+  .career-copy h3 {
+    font-size: clamp(2.3rem, 13vw, 4.5rem);
+  }
+
+  .career-phase {
+    display: grid;
+  }
+
+  .career-route span {
+    min-height: 62px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .career-track,
+  .career-panel::after,
+  .career-panel-inner {
+    transform: none !important;
+    clip-path: none !important;
+  }
+}

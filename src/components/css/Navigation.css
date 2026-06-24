@@ -10,10 +10,10 @@
   gap: 18px;
   align-items: center;
   padding: 8px 10px;
-  border: 1px solid oklch(0.92 0.02 155 / 0.12);
+  border: 1px solid var(--line);
   border-radius: 999px;
-  background: oklch(0.12 0.01 155 / 0.78);
-  backdrop-filter: blur(22px) saturate(130%);
+  background: oklch(1 0 0 / 0.78);
+  backdrop-filter: blur(20px) saturate(140%);
   transform: translateX(-50%);
 }
 
@@ -31,8 +31,8 @@
 
 .brand-mark {
   width: 48px;
-  background: var(--primary);
-  color: oklch(0.1 0 0);
+  background: var(--ink);
+  color: white;
   letter-spacing: -0.03em;
 }
 
@@ -45,13 +45,14 @@
 }
 
 .site-nav nav a:hover {
-  color: var(--ink);
+  color: var(--blue-strong);
 }
 
 .nav-contact {
   padding: 0 18px;
-  border: 1px solid oklch(0.92 0.02 155 / 0.18);
+  border: 1px solid var(--line);
   color: var(--ink);
+  background: white;
 }
 
 .brand-mark:hover,
