@@ -2,22 +2,19 @@ import gsap from "gsap";
 import { AnimationBase } from "../core/AnimationBase.js";
 
 /**
- * 项目场景动画 — 自然分屏入场
+ * 项目卡片区动画
  *
- * 当前版本先移除吸顶/pin，避免额外滚动距离造成空白页。
- * 每个项目仍保持一屏展示，并在进入视口时播放独立过渡。
+ * 只服务 ResumeDetails：
+ * 1. 区块标题按文字顺序入场；
+ * 2. 项目卡片按网格顺序批量浮现；
+ * 3. 弹窗本身由 React 控制显示，CSS 负责即时层级，不再使用 pin 或书页翻动。
  */
 export class ProjectScenesAnimation extends AnimationBase {
   build() {
-    const { q, isDesktop } = this;
+    const { q } = this;
 
     this.buildFieldIntros(q);
-
-    if (isDesktop) {
-      return this.buildDesktopSceneReveals(q);
-    }
-
-    return this.buildMobileSlides(q);
+    this.buildProjectCards(q);
   }
 
   /** 区块引导文案 — 简单一次性淡入 */
@@ -38,91 +35,30 @@ export class ProjectScenesAnimation extends AnimationBase {
     });
   }
 
-  /** 桌面端：自然文档流中的一屏一项目入场 */
-  buildDesktopSceneReveals(q) {
-    const stage = q(".project-scenes")[0];
-    const viewport = q(".project-scenes-viewport")[0];
-    const scenes = q(".project-scene");
-    const curl = q(".project-screen-curl")[0];
+  /** 项目卡片网格 — 鼠标 hover 交给 CSS，入场交给 GSAP */
+  buildProjectCards(q) {
+    const cards = q(".project-card");
 
-    if (!stage || !viewport || !scenes.length) {
+    if (!cards.length) {
       return;
     }
 
-    gsap.set(curl, {
+    gsap.from(cards, {
       autoAlpha: 0,
-    });
-    scenes.forEach((scene) => {
-      gsap.set(scene, {
-        position: "relative",
-        inset: "auto",
-        autoAlpha: 1,
-        zIndex: "auto",
-        scale: 1,
-        clipPath: "inset(0% 0% 0% 0%)",
-        "--page-dim": 0,
-      });
-
-      const sceneContent = this.getSceneContent(scene);
-      gsap.set(sceneContent, {
-        autoAlpha: 1,
-        y: 0,
-        clipPath: "inset(0% 0% 0% 0%)",
-      });
-
-      gsap.fromTo(
-        scene,
-        {
-          autoAlpha: 0,
-          y: 72,
-          scale: 0.975,
-          clipPath: "inset(10% 0% 0% 0%)",
-        },
-        {
-          autoAlpha: 1,
-          y: 0,
-          scale: 1,
-          clipPath: "inset(0% 0% 0% 0%)",
-          duration: 0.9,
-          ease: "portfolioReveal",
-          scrollTrigger: {
-            trigger: scene,
-            start: "top 82%",
-            once: true,
-            invalidateOnRefresh: true,
-          },
-        },
-      );
-    });
-  }
-
-  /** 只服务于项目经历模块的 DOM 目标集合，避免把动画封装成跨模块通用函数 */
-  getSceneContent(scene) {
-    return Array.from(scene.querySelectorAll([
-      ".project-kicker",
-      ".project-scene h3",
-      ".project-meta-line",
-      ".project-scene-main > p",
-      ".project-github",
-      ".project-stack",
-      ".project-duty",
-    ].join(",")));
-  }
-
-  /** 移动端：自然滚动 + 进入视口时整屏淡入 */
-  buildMobileSlides(q) {
-    q(".project-scene").forEach((scene) => {
-      gsap.from(scene, {
-        autoAlpha: 0,
-        y: 56,
-        duration: 0.85,
-        ease: "portfolioReveal",
-        scrollTrigger: {
-          trigger: scene,
-          start: "top 88%",
-          once: true,
-        },
-      });
+      y: 58,
+      scale: 0.965,
+      duration: 0.82,
+      stagger: {
+        each: 0.08,
+        grid: "auto",
+        from: "start",
+      },
+      ease: "portfolioReveal",
+      scrollTrigger: {
+        trigger: q(".project-card-grid")[0] || cards[0],
+        start: "top 78%",
+        once: true,
+      },
     });
   }
 }

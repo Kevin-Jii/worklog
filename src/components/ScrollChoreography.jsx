@@ -10,11 +10,11 @@ registerPortfolioEases();
 
 /** 需要 force3D 加速的公共选择器 */
 const GPU_TARGETS =
-  ".poster-stage, .poster-glyph, .poster-summary li, .career-track, .career-panel-inner, .career-card, .skills-stage-head, .skill-module, .skills-core, .stack-console, .project-scene, .ai-stage";
+  ".poster-stage, .poster-glyph, .poster-summary li, .career-track, .career-panel-inner, .career-card, .skills-stage-head, .skill-module, .skills-core, .stack-console, .project-card, .project-modal-panel, .ai-stage";
 
 /** 无障碍模式下需清除内联样式的选择器 */
 const REDUCED_MOTION_CLEAR =
-  ".poster-topline, .poster-name > *, .poster-summary li, .career-panel-copy > *, .career-route span, .career-card, .skills-stage-head, .skill-module, .skills-core, .stack-console, .project-scene, .project-screen-curl, .project-scene-surface";
+  ".poster-topline, .poster-name > *, .poster-summary li, .career-panel-copy > *, .career-route span, .career-card, .skills-stage-head, .skill-module, .skills-core, .stack-console, .project-card, .project-modal-panel";
 
 /**
  * 滚动编排入口组件
